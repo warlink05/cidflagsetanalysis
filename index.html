@@ -1,0 +1,32 @@
+<html>
+    <header>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/main.js"></script>
+    </header>
+    <body>
+        <title>Cid's Flagset Analysis</title>
+        <div style="align-items: center">
+            <h1><img src="img/Cid-Study1.gif" /> Cid's Flagset Analysis <img src="img/Cid-Study2.gif" /></h1>
+            <label>Input Flag String</label><br/><br/>
+            <textarea rows="6" cols="50" id="inputFlag" placeholder="(Flag string here)"></textarea><br/><br/>
+            <button id="submit">SUBMIT</button>        
+        </div>
+        <br/> <br />
+    <!--    
+        <div id="flagset">
+            O1:quest_forge/random:7,tough_quest/req:6/win:crystal Kmain/summon/moon/nofree Pkey Cstandard/nofree/start:cecil,kain,rydia,edward,rosa,yang,palom,porom,cid,edge/no:tellah,fusoya/j:abilities/nekkie/nodupes/hero Tpro/no:j/maxtier:6 Spro Bstandard/alt:gauntlet/whichburn Etoggle/no:jdrops Glife/backrow -kit:freedom -noadamants -nocursed -spoon
+        </div>
+    -->
+        <div id="summary"></div>
+    </body>
+    <script>
+        document.getElementById('submit').addEventListener('click', function() {
+            var str = $('textarea#inputFlag').val();
+            // console.log(str);
+            var sumText = summarizeFlagset(str);
+            $('#summary').html(sumText);
+            //console.log(sumText);
+            //alert(sumText);
+        }, false);
+    </script>
+</html>
