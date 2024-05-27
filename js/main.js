@@ -1419,7 +1419,7 @@ function glitchParse(str){
 
         if(glitch.localeCompare("none") == 0){
             // All glitches are turned off, abort and exit out of here.
-            return "Pass will be absent from the seed.";
+            return "No glitches are turned on.";
         }
 
         if(i == 0){
