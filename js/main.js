@@ -747,7 +747,7 @@ function characterParse(str){
             continue;
         }
         if(character.includes("nodupes")){
-            characterStr = characterStr.concat("<li><b>Duplibate characters not allowed</b>: If a duplicate character tries to join your party, nothing happens</li>");
+            characterStr = characterStr.concat("<li><b>Duplicate characters not allowed</b>: If a duplicate character tries to join your party, nothing happens</li>");
             continue;
         }
         if(character.includes("bye")){
