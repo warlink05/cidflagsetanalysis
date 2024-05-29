@@ -10,7 +10,6 @@ function summarizeFlagset(str){
             case 'O':
                 //Section: Done!
                 blockText = blockText.concat("<h2>Objectives</h2> ",objectiveParse(section.substring(1)));//,parseKey(section.substring(1)));
-                console.log("Objectives");
                 break;
             case 'K':
                 //Section: Done!
@@ -1248,8 +1247,12 @@ function subChest(str){
             chestString = chestString.concat("<li><b>Only ",chest.substring(7),"% of the chests are filled.</b></li>");
             continue;
         }
+        if(chest.includes("mintier")){
+            chestString = chestString.concat("<li><b>Chests contain tier ",chest.substring(8)," items at worst</b></li>");
+            continue;
+        }
         if(chest.includes("maxtier")){
-            chestString = chestString.concat("<li><b>Chests comntain tier ",chest.substring(8)," items at best</b></li>");
+            chestString = chestString.concat("<li><b>Chests contain tier ",chest.substring(8)," items at best</b></li>");
             continue;
         }
     }
